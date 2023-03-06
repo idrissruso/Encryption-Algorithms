@@ -1,10 +1,10 @@
 from typing import List
-from utils import letters, to_sting
+from utils import to_string, letters
 
 
 def shifted(letters_to_shift: List, shift: int) -> List[str]:
     shifted_list = []
-    t_shift = shift if shift <= len(letters) else shift - len(letters)
+    t_shift = shift if shift <= len(letters_to_shift) else shift - len(letters_to_shift)
     for i in range(len(letters_to_shift)):
         try:
             letter = letters_to_shift[i + t_shift]
@@ -23,17 +23,26 @@ def encode(word: str, shift: int) -> str:
     shifted_list = shifted(letters, shift)
     encoded = []
     for letter in word:
-        index = letters.index(letter)
-        encoded.append(shifted_list[index])
-    return to_sting(encoded)
+        if letter == " ":
+            encoded.append("#")  # we use "#" to represent spaces in the encoded string
+        else:
+            index = letters.index(letter)
+            encoded.append(shifted_list[index])
+    return to_string(encoded)
 
 
 def decode(word: str, shift: int) -> str:
     shifted_list = shifted(letters, shift)
-    encoded = []
+    decoded = []
     for letter in word:
-        index = shifted_list.index(letter)
-        encoded.append(letters[index])
-    return to_sting(encoded)
+        if letter == "#":
+            decoded.append(" ")  # we replace "#" with a space character in the decoded string
+        else:
+            index = shifted_list.index(letter)
+            decoded.append(letters[index])
+    return to_string(decoded)
 
 
+x = encode(word="idrissa rusongeka", shift=3)
+print(x)
+print(decode(word=x, shift=3))

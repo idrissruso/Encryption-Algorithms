@@ -25,6 +25,6 @@ def decode(word: str) -> str:
     return to_string(decoded)
 
 
-x = encode(word="idrissa rusongeka")
+x = encode(word="idrissa")
 print(x)
 print(decode(word=x))

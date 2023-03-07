@@ -1,22 +1,4 @@
-from typing import List
-from utils import to_string, letters
-
-
-def shifted(letters_to_shift: List, shift: int) -> List[str]:
-    shifted_list = []
-    t_shift = shift if shift <= len(letters_to_shift) else shift - len(letters_to_shift)
-    for i in range(len(letters_to_shift)):
-        try:
-            letter = letters_to_shift[i + t_shift]
-        except IndexError:
-            letter = letters_to_shift[i]
-        finally:
-            shifted_list.append(letter)
-    for i in range(t_shift):
-        if letters_to_shift[i] in shifted_list:
-            break
-        shifted_list.append(letters_to_shift[i])
-    return shifted_list
+from utils import to_string, letters, shifted
 
 
 def encode(word: str, shift: int) -> str:

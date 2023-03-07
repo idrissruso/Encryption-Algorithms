@@ -1,8 +1,8 @@
 from utils import to_string, letters, shifted
 
 
-def encode(word: str) -> str:
-    shifted_list = shifted(letters, 3)
+def encode(word: str, shift: int) -> str:
+    shifted_list = shifted(letters, shift)
     encoded = []
     for letter in word:
         if letter == " ":
@@ -13,8 +13,8 @@ def encode(word: str) -> str:
     return to_string(encoded)
 
 
-def decode(word: str) -> str:
-    shifted_list = shifted(letters, 3)
+def decode(word: str, shift: int) -> str:
+    shifted_list = shifted(letters, shift)
     decoded = []
     for letter in word:
         if letter == "#":
@@ -25,6 +25,6 @@ def decode(word: str) -> str:
     return to_string(decoded)
 
 
-x = encode(word="idrissa rusongeka")
+x = encode(word="idrissa rusongeka", shift=3)
 print(x)
-print(decode(word=x))
+print(decode(word=x, shift=3))

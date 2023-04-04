@@ -10,15 +10,15 @@ def to_string(letters_list: list) -> str:
 
 def shifted(letters_to_shift: List, shift: int) -> List[str]:
     shifted_list = []
-    t_shift = shift if shift <= len(letters_to_shift) else shift - len(letters_to_shift)
+    absolute_shift = shift if shift <= len(letters_to_shift) else shift - len(letters_to_shift)  # mode
     for i in range(len(letters_to_shift)):
         try:
-            letter = letters_to_shift[i + t_shift]
+            letter = letters_to_shift[i + absolute_shift]
         except IndexError:
             letter = letters_to_shift[i]
         finally:
             shifted_list.append(letter)
-    for i in range(t_shift):
+    for i in range(absolute_shift):
         if letters_to_shift[i] in shifted_list:
             break
         shifted_list.append(letters_to_shift[i])

@@ -25,6 +25,4 @@ def decode(word: str, shift: int) -> str:
     return to_string(decoded)
 
 
-x = encode(word="idrissa rusongeka", shift=3)
-print(x)
-print(decode(word=x, shift=3))
+

@@ -6,7 +6,7 @@ def encode(word: str, a: int, b: int) -> str:
     for letter in word:
         x = letters.index(letter)
         y = a * x + b
-        index = y if y <= len(letters) else y % len(letters)
+        index = y if y <= len(letters) else y % len(letters)  # mode
         encoded.append(letters[index])
     return to_string(encoded)
 
@@ -16,9 +16,6 @@ def decode(word: str, a: int, b: int) -> str:
     for letter in word:
         x = letters.index(letter)
         y_ = int((x - b) / a)  # ters fonksiyon
-        index = y_ if y_ <= len(letters) else y_ % len(letters)
+        index = y_ if y_ <= len(letters) else y_ % len(letters)  # mode
         encoded.append(letters[index])
     return to_string(encoded)
-
-
-

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6c558b15-e997-4767-a23b-0da217ff099b" name="Changes" comment="decode">
+      <change afterPath="$PROJECT_DIR$/Algorithms/Classic Algorithms/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Algorithms/permutation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms/ceaser_cipher.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Classic Algorithms/ceaser_cipher.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms/kaydirmali.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Classic Algorithms/kaydirmali.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithms/linear.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Classic Algorithms/linear.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithms/Classic Algorithms/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,9 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\idris\PycharmProjects\Algorithms\Algorithms\Classic Algorithms" />
       <recent name="C:\Users\idris\PycharmProjects\Algorithms\Algorithms" />
+      <recent name="C:\Users\idris\PycharmProjects\Algorithms\Classic Algorithms" />
     </key>
   </component>
   <component name="RunManager">
@@ -134,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680645982375</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="decode">
+      <created>1680646414492</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680646414492</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

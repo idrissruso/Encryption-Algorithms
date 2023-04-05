@@ -28,10 +28,9 @@ def encode(n: int, word: str) -> str:
     i = 0
     while i < len(word_):
         for j in range(n):
-            if i + j < len(word_):
-                index = anahtar[j] - 1
-                letter = word_[i + index]
-                encoded_w.append(letter)
+            index = anahtar[j] - 1
+            letter = word_[i + index]
+            encoded_w.append(letter)
         i += n
     return to_string(encoded_w)
 
@@ -41,14 +40,13 @@ def decode(n: int, encoded_word: str) -> str:
     i = 0
     while i < len(encoded_word):
         for j in range(n):
-            if i + j < len(encoded_word):
-                index = anahtar.index(j + 1)
-                letter = encoded_word[i + index]
-                decoded_w.append(letter)
+            index = anahtar.index(j + 1)
+            letter = encoded_word[i + index]
+            decoded_w.append(letter)
         i += n
     decoded_word = to_string(decoded_w)
     return decoded_word
 
 
-print(encode(5, "merhaba"))
-print(decode(5, encode(5, "merhaba")))
+print(encode(5, "naitwa idrissa rusongeka"))
+print(decode(5, encode(5, "naitwa idrissa rusongeka")))
